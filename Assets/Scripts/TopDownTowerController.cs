@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class TopDownTowerController : MonoBehaviour
 {
-    private event Action<Vector2> OnLookEvnet;
+    public event Action<Vector2> OnLookEvent;
 
-    public void CallLookEvent(Vector2 dircetion)
+    public void CallMoveEvent(Vector2 direction)
     {
-        OnLookEvnet?.Invoke(dircetion);
+        OnLookEvent?.Invoke(direction);
     }
+
 }
