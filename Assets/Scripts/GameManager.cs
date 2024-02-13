@@ -40,6 +40,10 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         curTIL = 0;
+        killScore = 0;
+        clearScore = 0;
+        ownedGold = 1000;
+        curRound = 0;
     }
 
     private void Update()
