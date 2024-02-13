@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
         curTIL = 0;
         killScore = 0;
         clearScore = 0;
