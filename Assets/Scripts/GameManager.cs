@@ -20,13 +20,14 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Clear Menu")]
     [SerializeField] private GameObject gameClearUI;
-    [SerializeField] private TextMeshProUGUI gameClear_curKillScore;
-    [SerializeField] private TextMeshProUGUI gameClear_bestKillScore;
+    [SerializeField] private TextMeshProUGUI gameClear_curScore;
+    [SerializeField] private TextMeshProUGUI gameClear_bestScore;
 
     [HideInInspector]
     private int curTIL;
     private int killScore;
     private int ownedGold;
+    private int clearScore;
 
 
     private void Awake()
@@ -59,12 +60,39 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0.0f;
+        gameOver_curKillScore.text = killScore.ToString();
+        if (PlayerPrefs.HasKey("bestScore") == false)
+        {
+            PlayerPrefs.SetInt("bestScore", killScore);
+        }
+        else
+        {
+            if(PlayerPrefs.GetInt("bestScore") < killScore)
+            {
+                PlayerPrefs.SetInt("bestScore", killScore);
+            }
+        }
+        gameOver_bestKillScore.text = PlayerPrefs.GetInt("bestScore").ToString();
         gameOverUI.SetActive(true);
     }
 
     public void GameClear()
     {
         Time.timeScale = 0.0f;
+        clearScore = killScore + (40 - curTIL);
+        gameClear_curScore.text = clearScore.ToString();
+        if (PlayerPrefs.HasKey("bestScore") == false)
+        {
+            PlayerPrefs.SetInt("bestScore", clearScore);
+        }
+        else
+        {
+            if (PlayerPrefs.GetInt("bestScore") < clearScore)
+            {
+                PlayerPrefs.SetInt("bestScore", clearScore);
+            }
+        }
+        gameClear_bestScore.text = PlayerPrefs.GetInt("bestScore").ToString();
         gameClearUI.SetActive(true);
     }
 
