@@ -5,10 +5,12 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] Transform towerPosition;
+    [SerializeField] Transform tower;
     Camera mainCamera;
 
     public UI_ShopPanel shopPanel;
     public UI_TopPanel topPanel;
+    public UI_UpgradePanel upgradePanel;
 
     void Awake()
     {
@@ -22,13 +24,10 @@ public class UIManager : MonoBehaviour
         shopPanel.OpenShop(towerPosition);
     }
 
-    void CallDescription()
+    public void SetTarget2(Transform tower)
     {
-
-    }
-
-    private void OnMouseEnter()
-    {
-        
+        this.tower = tower;
+        //transform.position = mainCamera.WorldToScreenPoint(tower.position);
+        upgradePanel.OpenUpgrade(tower);
     }
 }
