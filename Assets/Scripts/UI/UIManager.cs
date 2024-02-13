@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] Transform target;
+    [SerializeField] Transform towerPosition;
     Camera mainCamera;
 
     public UI_ShopPanel shopPanel;
+    public UI_TopPanel topPanel;
 
-    // Start is called before the first frame update
     void Awake()
     {
-        
+        shopPanel.Init();
     }
 
-    public void SetTarget(Transform target)
+    public void SetTarget(Transform towerPosition)
     {
-        this.target = target;
+        this.towerPosition = towerPosition;
         //transform.position = mainCamera.WorldToScreenPoint(target.position);
-        shopPanel.OpenShop(target);
+        shopPanel.OpenShop(towerPosition);
     }
 
     // Update is called once per frame
@@ -27,6 +27,5 @@ public class UIManager : MonoBehaviour
     {
         
     }
-
 
 }
