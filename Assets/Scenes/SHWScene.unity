@@ -174,8 +174,8 @@ MonoBehaviour:
   gameOver_curKillScore: {fileID: 1714177411}
   gameOver_bestKillScore: {fileID: 19608384}
   gameClearUI: {fileID: 395473359}
-  gameClear_curKillScore: {fileID: 545877670}
-  gameClear_bestKillScore: {fileID: 307661040}
+  gameClear_curScore: {fileID: 0}
+  gameClear_bestScore: {fileID: 0}
 --- !u!1 &19608382
 GameObject:
   m_ObjectHideFlags: 0
@@ -759,7 +759,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uC774\uBC88\uD310\uC5D0 \uD1F4\uCE58\uD55C \uC218 "
+  m_text: "\uC774\uBC88\uD310 \uC810\uC218 "
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e736ecd235eb7fe439b0ea28003f0894, type: 2}
   m_sharedMaterial: {fileID: 2983953584819802762, guid: e736ecd235eb7fe439b0ea28003f0894, type: 2}
@@ -3291,7 +3291,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\uAC00\uC7A5 \uB9CE\uC774 \uD1F4\uCE58\uD55C \uC218 "
+  m_text: "\uCD5C\uACE0 \uC810\uC218"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e736ecd235eb7fe439b0ea28003f0894, type: 2}
   m_sharedMaterial: {fileID: 2983953584819802762, guid: e736ecd235eb7fe439b0ea28003f0894, type: 2}
