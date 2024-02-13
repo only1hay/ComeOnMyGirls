@@ -5,7 +5,7 @@ using UnityEngine;
 public class UI_ShopPanel : MonoBehaviour
 {
     Camera mainCamera;
-    // Start is called before the first frame update
+
     public void Init()
     {
         mainCamera = Camera.main;
@@ -15,8 +15,9 @@ public class UI_ShopPanel : MonoBehaviour
     public void OpenShop(Transform towerPosition)
     {
         gameObject.SetActive(true);
-        transform.position = mainCamera.WorldToScreenPoint(towerPosition.position);
+        //transform.position = mainCamera.WorldToScreenPoint(towerPosition.position);
     }
+    //타워포지션을 클릭하면 shopPanel활성화
 
     public void CloseShop()
     {
