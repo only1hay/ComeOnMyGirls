@@ -45,6 +45,7 @@ public class GameManager : MonoBehaviour
         curTILText.text = curTIL.ToString();
         killScoreText.text = killScore.ToString();
         ownedGoldText.text = ownedGold.ToString();
+
     }
 
     public void AddTIL()
@@ -61,18 +62,18 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         gameOver_curKillScore.text = killScore.ToString();
-        if (PlayerPrefs.HasKey("bestScore") == false)
+        if (PlayerPrefs.HasKey("bestkillScore") == false)
         {
-            PlayerPrefs.SetInt("bestScore", killScore);
+            PlayerPrefs.SetInt("bestkillScore", killScore);
         }
         else
         {
-            if(PlayerPrefs.GetInt("bestScore") < killScore)
+            if(PlayerPrefs.GetInt("bestkillScore") < killScore)
             {
-                PlayerPrefs.SetInt("bestScore", killScore);
+                PlayerPrefs.SetInt("bestkillScore", killScore);
             }
         }
-        gameOver_bestKillScore.text = PlayerPrefs.GetInt("bestScore").ToString();
+        gameOver_bestKillScore.text = PlayerPrefs.GetInt("bestkillScore").ToString();
         gameOverUI.SetActive(true);
     }
 
