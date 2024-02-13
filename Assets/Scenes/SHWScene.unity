@@ -170,6 +170,7 @@ MonoBehaviour:
   curTILText: {fileID: 0}
   ownedGoldText: {fileID: 0}
   killScoreText: {fileID: 0}
+  curRoundText: {fileID: 0}
   gameOverUI: {fileID: 1804088934}
   gameOver_curKillScore: {fileID: 1714177411}
   gameOver_bestKillScore: {fileID: 19608384}

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI curTILText;
     [SerializeField] private TextMeshProUGUI ownedGoldText;
     [SerializeField] private TextMeshProUGUI killScoreText;
+    [SerializeField] private TextMeshProUGUI curRoundText;
 
     [Header("Game Over Menu")]
     [SerializeField] private GameObject gameOverUI;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     private int killScore;
     private int ownedGold;
     private int clearScore;
+    private int curRound;
 
 
     private void Awake()
@@ -42,9 +44,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //curTILText.text = curTIL.ToString();
-        //killScoreText.text = killScore.ToString();
-        //ownedGoldText.text = ownedGold.ToString();
+        curTILText.text = curTIL.ToString();
+        killScoreText.text = killScore.ToString();
+        ownedGoldText.text = ownedGold.ToString();
+        curRoundText.text = curRound.ToString();
 
     }
 
