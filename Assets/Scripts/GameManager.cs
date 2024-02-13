@@ -42,9 +42,9 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        curTILText.text = curTIL.ToString();
-        killScoreText.text = killScore.ToString();
-        ownedGoldText.text = ownedGold.ToString();
+        //curTILText.text = curTIL.ToString();
+        //killScoreText.text = killScore.ToString();
+        //ownedGoldText.text = ownedGold.ToString();
 
     }
 
