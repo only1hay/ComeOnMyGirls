@@ -135,7 +135,6 @@ GameObject:
   - component: {fileID: 18158730}
   - component: {fileID: 18158729}
   - component: {fileID: 18158728}
-  - component: {fileID: 18158731}
   m_Layer: 5
   m_Name: PuaseBtn
   m_TagString: Untagged
@@ -207,8 +206,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 18158731}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+      - m_Target: {fileID: 57706426}
+        m_TargetAssemblyTypeName: UI_TopPanel, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
@@ -257,21 +256,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 18158726}
   m_CullTransparentMesh: 1
---- !u!114 &18158731
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18158726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a14c6c33ed7eb4b867fafbd26b8182, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseBtn: {fileID: 18158726}
-  resumeBtn: {fileID: 1378045009}
-  shopCanvas: {fileID: 0}
 --- !u!1 &29729266
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,6 +426,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 57706425}
+  - component: {fileID: 57706426}
   m_Layer: 5
   m_Name: TopPanel
   m_TagString: Untagged
@@ -463,7 +448,6 @@ RectTransform:
   m_Children:
   - {fileID: 1994970021}
   - {fileID: 2066099936}
-  - {fileID: 608289200}
   - {fileID: 1128912634}
   - {fileID: 1936038844}
   - {fileID: 18158727}
@@ -476,6 +460,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &57706426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 57706424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9693c49b12e1cde4681b31fb03a88f3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseBtn: {fileID: 18158726}
+  resumeBtn: {fileID: 1378045009}
 --- !u!1 &145429625
 GameObject:
   m_ObjectHideFlags: 0
@@ -2331,12 +2329,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 57706425}
+  m_Father: {fileID: 2066099936}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -190, y: 460}
+  m_AnchoredPosition: {x: 189, y: 0}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608289201
@@ -4061,8 +4059,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d881030124b9cf45a75f180c85c5ff9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 224083862}
+  towerPosition: {fileID: 224083862}
   shopPanel: {fileID: 255124184}
+  topPanel: {fileID: 57706426}
 --- !u!4 &1204868765
 Transform:
   m_ObjectHideFlags: 0
@@ -4561,7 +4560,6 @@ GameObject:
   - component: {fileID: 1378045014}
   - component: {fileID: 1378045013}
   - component: {fileID: 1378045012}
-  - component: {fileID: 1378045015}
   m_Layer: 5
   m_Name: ResumeBtn
   m_TagString: Untagged
@@ -4633,8 +4631,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1378045015}
-        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+      - m_Target: {fileID: 57706426}
+        m_TargetAssemblyTypeName: UI_TopPanel, Assembly-CSharp
         m_MethodName: ResumeGame
         m_Mode: 1
         m_Arguments:
@@ -4683,21 +4681,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1378045009}
   m_CullTransparentMesh: 1
---- !u!114 &1378045015
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1378045009}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a14c6c33ed7eb4b867fafbd26b8182, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseBtn: {fileID: 18158726}
-  resumeBtn: {fileID: 1378045009}
-  shopCanvas: {fileID: 0}
 --- !u!1 &1411451123
 GameObject:
   m_ObjectHideFlags: 0
@@ -6202,7 +6185,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 608289200}
   m_Father: {fileID: 57706425}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ButtonManager : MonoBehaviour
+public class UI_TopPanel : MonoBehaviour
 {
     public GameObject pauseBtn;
     public GameObject resumeBtn;
-
-    public GameObject shopCanvas;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
     public void PauseGame()//일시정지
     {
@@ -22,11 +25,4 @@ public class ButtonManager : MonoBehaviour
         pauseBtn.SetActive(true);
         resumeBtn.SetActive(false);
     }
-
-    public void CloseShop()
-    {
-        shopCanvas.SetActive(false);
-    }
-
-
 }
