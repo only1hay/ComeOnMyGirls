@@ -366,8 +366,8 @@ GameObject:
   m_Component:
   - component: {fileID: 43613200}
   - component: {fileID: 43613203}
-  - component: {fileID: 43613202}
   - component: {fileID: 43613201}
+  - component: {fileID: 43613204}
   m_Layer: 0
   m_Name: TowerPoint (12)
   m_TagString: Untagged
@@ -435,18 +435,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &43613202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 43613199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &43613203
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -499,6 +487,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &43613204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 43613199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &96442053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2277,8 +2278,8 @@ GameObject:
   m_Component:
   - component: {fileID: 674671473}
   - component: {fileID: 674671476}
-  - component: {fileID: 674671475}
   - component: {fileID: 674671474}
+  - component: {fileID: 674671477}
   m_Layer: 0
   m_Name: TowerPoint (17)
   m_TagString: Untagged
@@ -2346,18 +2347,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &674671475
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674671472}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &674671476
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2410,6 +2399,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &674671477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 674671472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &749006438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,8 +3330,8 @@ GameObject:
   m_Component:
   - component: {fileID: 799031469}
   - component: {fileID: 799031472}
-  - component: {fileID: 799031471}
   - component: {fileID: 799031470}
+  - component: {fileID: 799031473}
   m_Layer: 0
   m_Name: TowerPoint (14)
   m_TagString: Untagged
@@ -3397,18 +3399,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &799031471
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799031468}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &799031472
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3461,6 +3451,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &799031473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 799031468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &807696541
 GameObject:
   m_ObjectHideFlags: 0
@@ -3471,8 +3474,8 @@ GameObject:
   m_Component:
   - component: {fileID: 807696542}
   - component: {fileID: 807696545}
-  - component: {fileID: 807696544}
   - component: {fileID: 807696543}
+  - component: {fileID: 807696546}
   m_Layer: 0
   m_Name: TowerPoint (7)
   m_TagString: Untagged
@@ -3540,18 +3543,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &807696544
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 807696541}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &807696545
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3604,6 +3595,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &807696546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807696541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &815734504
 GameObject:
   m_ObjectHideFlags: 0
@@ -4884,8 +4888,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1035894213}
   - component: {fileID: 1035894216}
-  - component: {fileID: 1035894215}
   - component: {fileID: 1035894214}
+  - component: {fileID: 1035894217}
   m_Layer: 0
   m_Name: TowerPoint (8)
   m_TagString: Untagged
@@ -4953,18 +4957,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1035894215
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1035894212}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1035894216
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5017,6 +5009,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1035894217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1035894212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &1051437706
 GameObject:
   m_ObjectHideFlags: 0
@@ -5296,8 +5301,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1072651600}
   - component: {fileID: 1072651603}
-  - component: {fileID: 1072651602}
   - component: {fileID: 1072651601}
+  - component: {fileID: 1072651604}
   m_Layer: 0
   m_Name: TowerPoint (18)
   m_TagString: Untagged
@@ -5365,18 +5370,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1072651602
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1072651599}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1072651603
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5429,6 +5422,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1072651604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1072651599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &1079125325
 GameObject:
   m_ObjectHideFlags: 0
@@ -5673,8 +5679,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1178378268}
   - component: {fileID: 1178378271}
-  - component: {fileID: 1178378270}
   - component: {fileID: 1178378269}
+  - component: {fileID: 1178378272}
   m_Layer: 0
   m_Name: TowerPoint (19)
   m_TagString: Untagged
@@ -5742,18 +5748,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1178378270
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1178378267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1178378271
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5806,6 +5800,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1178378272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1178378267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &1182025096
 GameObject:
   m_ObjectHideFlags: 0
@@ -5816,8 +5823,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1182025097}
   - component: {fileID: 1182025100}
-  - component: {fileID: 1182025099}
   - component: {fileID: 1182025098}
+  - component: {fileID: 1182025101}
   m_Layer: 0
   m_Name: TowerPoint (10)
   m_TagString: Untagged
@@ -5885,18 +5892,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1182025099
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1182025096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1182025100
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5949,6 +5944,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1182025101
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1182025096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &1211775563
 GameObject:
   m_ObjectHideFlags: 0
@@ -6039,8 +6047,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1232367842}
   - component: {fileID: 1232367845}
-  - component: {fileID: 1232367844}
   - component: {fileID: 1232367843}
+  - component: {fileID: 1232367846}
   m_Layer: 0
   m_Name: TowerPoint (1)
   m_TagString: Untagged
@@ -6108,18 +6116,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1232367844
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1232367841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1232367845
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6172,6 +6168,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1232367846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232367841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &1233072342
 GameObject:
   m_ObjectHideFlags: 0
@@ -6182,8 +6191,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1233072343}
   - component: {fileID: 1233072346}
-  - component: {fileID: 1233072345}
   - component: {fileID: 1233072344}
+  - component: {fileID: 1233072347}
   m_Layer: 0
   m_Name: TowerPoint (16)
   m_TagString: Untagged
@@ -6251,18 +6260,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1233072345
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233072342}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1233072346
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6315,6 +6312,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1233072347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1233072342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &1308583436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6325,8 +6335,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1308583439}
   - component: {fileID: 1308583438}
-  - component: {fileID: 1308583437}
   - component: {fileID: 1308583440}
+  - component: {fileID: 1308583441}
   m_Layer: 0
   m_Name: TowerPoint
   m_TagString: Untagged
@@ -6334,18 +6344,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1308583437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1308583436}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1308583438
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -6458,6 +6456,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1308583441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1308583436}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &1444840086
 GameObject:
   m_ObjectHideFlags: 0
@@ -6949,8 +6960,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1793097115}
   - component: {fileID: 1793097118}
-  - component: {fileID: 1793097117}
   - component: {fileID: 1793097116}
+  - component: {fileID: 1793097119}
   m_Layer: 0
   m_Name: TowerPoint (15)
   m_TagString: Untagged
@@ -7018,18 +7029,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1793097117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793097114}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1793097118
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7082,6 +7081,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1793097119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1793097114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &1803345259
 GameObject:
   m_ObjectHideFlags: 0
@@ -7092,8 +7104,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1803345260}
   - component: {fileID: 1803345263}
-  - component: {fileID: 1803345262}
   - component: {fileID: 1803345261}
+  - component: {fileID: 1803345264}
   m_Layer: 0
   m_Name: TowerPoint (11)
   m_TagString: Untagged
@@ -7161,18 +7173,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1803345262
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1803345259}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1803345263
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -7225,6 +7225,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1803345264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1803345259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &1804088934
 GameObject:
   m_ObjectHideFlags: 0
@@ -9121,8 +9134,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1947078223}
   - component: {fileID: 1947078226}
-  - component: {fileID: 1947078225}
   - component: {fileID: 1947078224}
+  - component: {fileID: 1947078227}
   m_Layer: 0
   m_Name: TowerPoint (9)
   m_TagString: Untagged
@@ -9190,18 +9203,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1947078225
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947078222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cdfd0ac6bb7350b49be752592610d1de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &1947078226
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -9254,6 +9255,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1947078227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1947078222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb332e4315581f84b9256dd486aeef9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  UIMgr: {fileID: 0}
 --- !u!1 &2065346471
 GameObject:
   m_ObjectHideFlags: 0
