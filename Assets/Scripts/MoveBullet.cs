@@ -6,20 +6,22 @@ using UnityEngine;
 public class MoveBullet : MonoBehaviour
 {
     [SerializeField]
-    private Vector2 sprite;
+    private GameObject sprite;
     [SerializeField]
-    private Vector2 spawn;
+    private GameObject spawn;
     [SerializeField]
     private Vector2 moveDirection = Vector2.zero;
     private void Rad()
     {
-        Vector2 newDirection = sprite - spawn;
+        Vector2 newDirection = spawn.transform.position - sprite.transform.position;
         newDirection = newDirection.normalized;
         moveDirection = newDirection;
     }
 
     private void Awake()
     {
+        sprite = GameObject.Find("MainSprite");
+        spawn = GameObject.Find("BulletSpawnPoint");
         Rad();
     }
 

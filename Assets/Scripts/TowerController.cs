@@ -16,12 +16,22 @@ public class TowerController : MonoBehaviour
     [SerializeField] private Transform muzzle;
     private void Update()
     {
-        Attack();
+        
     }
-    private void Attack()
+
+    private void Awake()
     {
-        GameObject newBullet = Instantiate(bullet,bulletSys);
-        newBullet.transform.position = muzzle.position;
+        StartCoroutine("Attack");
+    }
+    private IEnumerator Attack()
+    {
+        while (true)
+        {
+            GameObject newBullet = Instantiate(bullet, bulletSys);
+            newBullet.transform.position = muzzle.position;
+            yield return new WaitForSeconds(1f);
+        }
+        
     }
 
 }
