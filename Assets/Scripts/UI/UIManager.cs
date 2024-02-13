@@ -22,10 +22,13 @@ public class UIManager : MonoBehaviour
         shopPanel.OpenShop(towerPosition);
     }
 
-    // Update is called once per frame
-    void Update()
+    void CallDescription()
+    {
+
+    }
+
+    private void OnMouseEnter()
     {
         
     }
-
 }
