@@ -20,20 +20,16 @@ public class Description : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         
     }
 
-    //public void OnPointerEnter()
-    //{
-    //    Debug.Log("마우스온");
-    //    description.SetActive(true);
-    //}
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("마우스온");
         description.SetActive(true);
     }
+    //마우스가 올라가면 설명란 나옴
 
     public void OnPointerExit(PointerEventData eventData)
     {
         description.SetActive(false);
     }   
+
 }
