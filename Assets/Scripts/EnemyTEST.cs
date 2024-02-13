@@ -15,7 +15,7 @@ public class EnemyTEST : MonoBehaviour
 
     private void Death()
     {
-        if (HP > 0)
+        if (HP < 0)
         {
             Destroy(gameObject);
         }
