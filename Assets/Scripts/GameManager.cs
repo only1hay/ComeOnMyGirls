@@ -36,14 +36,14 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        killScoreText.text = killScore.ToString();
-        ownedGoldText.text = ownedGold.ToString();
         curTIL = 0;
     }
 
     private void Update()
     {
         curTILText.text = curTIL.ToString();
+        killScoreText.text = killScore.ToString();
+        ownedGoldText.text = ownedGold.ToString();
     }
 
     public void AddTIL()
