@@ -132,8 +132,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 201625238}
-  - component: {fileID: 201625239}
-  - component: {fileID: 201625240}
   m_Layer: 0
   m_Name: Tower
   m_TagString: Untagged
@@ -158,35 +156,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &201625239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201625237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2366ef374dee9c146ade4eb5aa566f2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 1848762447336290786, guid: 43a186b969c2aa24a816e3c620b34062, type: 3}
-  state: 0
-  bulletSys: {fileID: 1350138134}
-  muzzle: {fileID: 1462778142}
---- !u!114 &201625240
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 201625237}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6497bd097c9d56c4eb77b74afb84f100, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Target: {fileID: 877358778}
 --- !u!1 &629686902
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877358778}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.2443705, y: -2.234693, z: 0}
+  m_LocalPosition: {x: -3.85, y: 0.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
