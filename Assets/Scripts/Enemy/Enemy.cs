@@ -12,7 +12,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int hp = 1;
-    [SerializeField] private int reward = 100;
+    public int reward = 100;
 
     private Transform[] wayPoints;
     private int wayPointCount;
@@ -81,6 +81,7 @@ public class Enemy : MonoBehaviour
             // @@@@@리워드 추가 구현하기!!!!!
 
             enemySpawn.EnemyDie(this, gameObject);
+            GameManager.instance.AddGold();
         }
 
         hp -= _damage;
