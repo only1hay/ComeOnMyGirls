@@ -17,9 +17,13 @@ public class UIManager : MonoBehaviour
         shopPanel.Init(this);
     }
 
-    public void SetTarget(TowerPosition towerPosition)
+    public void SetTarget(TowerPosition _towerPosition)
     {
-        this.towerPosition = towerPosition;
+        if(towerPosition != null)
+        {
+            towerPosition.ClosePoint();
+        }
+        this.towerPosition = _towerPosition;
         //transform.position = mainCamera.WorldToScreenPoint(target.position);
         shopPanel.OpenShop();
     }
@@ -34,5 +38,6 @@ public class UIManager : MonoBehaviour
     public void CloseShop()
     {
         towerPosition.ClosePoint();
+        towerPosition = null;
     }
 }
