@@ -1,21 +1,16 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// SpawnPoint�� ��ũ��Ʈ ����
-// spawnPoints�� SpawnPoint, ���� �̵� ��� ������� �Ҵ�
-// enemyPrefabs�� �� �Ҵ�
-
-// ���� �������� ����
-// ���� 1~3�� �������� �� ����
-
-public class EnemySpawn : MonoBehaviour
+public class SpawnCopy : MonoBehaviour
 {
     [SerializeField] private Transform[] spawnPoints;
     [SerializeField] private GameObject[] enemyPrefabs;
+    private List<Enemy> enemies;
 
     private void Awake()
     {
+        enemies = new List<Enemy>();
         StartCoroutine("SpawnEnemy");
     }
 
@@ -29,9 +24,17 @@ public class EnemySpawn : MonoBehaviour
             Enemy enemy = clone.GetComponent<Enemy>();
 
             enemy.Init(spawnPoints);
+            enemies.Add(enemy);
 
             float spawnTime = Random.Range(1, 4);
             yield return new WaitForSeconds(spawnTime);
         }
     }
+
+    public void DestroyEnemty(Enemy enemy)
+    {
+        enemies.Remove(enemy);
+        Destroy(enemy.gameObject);
+    }
 }
+*/
