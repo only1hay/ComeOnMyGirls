@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI curTILText;
     [SerializeField] private TextMeshProUGUI ownedGoldText;
     [SerializeField] private TextMeshProUGUI killScoreText;
+    [SerializeField] private TextMeshProUGUI curRoundText;
 
     [Header("Game Over Menu")]
     [SerializeField] private GameObject gameOverUI;
@@ -28,6 +29,7 @@ public class GameManager : MonoBehaviour
     private int killScore;
     private int ownedGold;
     private int clearScore;
+    private int curRound;
 
 
     private void Awake()
@@ -37,7 +39,12 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1.0f;
         curTIL = 0;
+        killScore = 0;
+        clearScore = 0;
+        ownedGold = 1000;
+        curRound = 0;
     }
 
     private void Update()
@@ -45,6 +52,8 @@ public class GameManager : MonoBehaviour
         curTILText.text = curTIL.ToString();
         killScoreText.text = killScore.ToString();
         ownedGoldText.text = ownedGold.ToString();
+        curRoundText.text = curRound.ToString();
+
     }
 
     public void AddTIL()
@@ -61,18 +70,18 @@ public class GameManager : MonoBehaviour
     {
         Time.timeScale = 0.0f;
         gameOver_curKillScore.text = killScore.ToString();
-        if (PlayerPrefs.HasKey("bestScore") == false)
+        if (PlayerPrefs.HasKey("bestkillScore") == false)
         {
-            PlayerPrefs.SetInt("bestScore", killScore);
+            PlayerPrefs.SetInt("bestkillScore", killScore);
         }
         else
         {
-            if(PlayerPrefs.GetInt("bestScore") < killScore)
+            if(PlayerPrefs.GetInt("bestkillScore") < killScore)
             {
-                PlayerPrefs.SetInt("bestScore", killScore);
+                PlayerPrefs.SetInt("bestkillScore", killScore);
             }
         }
-        gameOver_bestKillScore.text = PlayerPrefs.GetInt("bestScore").ToString();
+        gameOver_bestKillScore.text = PlayerPrefs.GetInt("bestkillScore").ToString();
         gameOverUI.SetActive(true);
     }
 
