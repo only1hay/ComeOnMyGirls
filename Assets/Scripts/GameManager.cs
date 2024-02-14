@@ -35,6 +35,8 @@ public class GameManager : MonoBehaviour
     private int clearScore;
     private int curRound;
 
+    [Header("TowerPosition")]
+    [SerializeField] private GameObject TowerPosition;
 
     private void Awake()
     {
@@ -51,14 +53,14 @@ public class GameManager : MonoBehaviour
         curRound = 0;
     }
 
-    private void Update()
+    /*private void Update()
     {
         curTILText.text = curTIL.ToString();
         killScoreText.text = killScore.ToString();
         ownedGoldText.text = ownedGold.ToString();
         curRoundText.text = curRound.ToString();
 
-    }
+    }*/
 
     public void AddTIL()
     {
@@ -121,5 +123,15 @@ public class GameManager : MonoBehaviour
     public void GoToTitle()
     {
         SceneManager.LoadScene("StartScene");
+    }
+
+    public void SetTowerPosition(TowerPosition towerPosition)
+    {
+        TowerPosition = towerPosition.gameObject;
+    }
+
+    public GameObject GetTowerPosition()
+    {
+        return TowerPosition;
     }
 }

@@ -1373,7 +1373,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &255124183
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3162,6 +3162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 1804037868}
   money: {fileID: 608289201}
+  towerPrefab: {fileID: 0}
 --- !u!1 &600991822
 GameObject:
   m_ObjectHideFlags: 0
@@ -3838,6 +3839,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 2075056928}
   money: {fileID: 608289201}
+  towerPrefab: {fileID: 0}
 --- !u!1 &708346256
 GameObject:
   m_ObjectHideFlags: 0
@@ -4483,6 +4485,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 437065895}
   money: {fileID: 608289201}
+  towerPrefab: {fileID: 0}
 --- !u!1 &974529770
 GameObject:
   m_ObjectHideFlags: 0
@@ -5395,6 +5398,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 439818548}
   money: {fileID: 608289201}
+  towerPrefab: {fileID: 4078655389985731661, guid: 81d173263836ccd41884c6d0e7609f40, type: 3}
 --- !u!1 &1204868763
 GameObject:
   m_ObjectHideFlags: 0
@@ -5729,6 +5733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 145429627}
   money: {fileID: 608289201}
+  towerPrefab: {fileID: 0}
 --- !u!1 &1339991065
 GameObject:
   m_ObjectHideFlags: 0
@@ -6390,6 +6395,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1488980627}
   m_CullTransparentMesh: 1
+--- !u!1 &1550932594
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1550932596}
+  - component: {fileID: 1550932595}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1550932595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550932594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ffdf07cf86efae0449e08ce7c414c8f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curTILText: {fileID: 0}
+  ownedGoldText: {fileID: 0}
+  killScoreText: {fileID: 0}
+  curRoundText: {fileID: 0}
+  gameOverUI: {fileID: 0}
+  gameOver_curKillScore: {fileID: 0}
+  gameOver_bestKillScore: {fileID: 0}
+  gameClearUI: {fileID: 0}
+  gameClear_curScore: {fileID: 0}
+  gameClear_bestScore: {fileID: 0}
+  pauseBtn: {fileID: 0}
+  resumeBtn: {fileID: 0}
+  TowerPosition: {fileID: 0}
+--- !u!4 &1550932596
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1550932594}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.4672544, y: 0.8040031, z: -0.02698053}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1584759495
 GameObject:
   m_ObjectHideFlags: 0

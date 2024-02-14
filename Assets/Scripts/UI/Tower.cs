@@ -19,6 +19,6 @@ public class Tower : MonoBehaviour
 
     private void OnMouseDown()
     {
-        UIMgr.SetTarget2(this.transform);
+       /* UIMgr.SetTarget2(this.transform);*/
     }
 }

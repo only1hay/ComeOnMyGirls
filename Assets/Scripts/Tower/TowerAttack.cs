@@ -37,16 +37,20 @@ public class TowerAttack : MonoBehaviour
     
     private void Attack()
     {
-        if (attackRange <= _ability.attackRange && !isAttack)
+        if (attackRange > 0)
         {
-            StartCoroutine("AttackToTarget");
-            isAttack = true;
+            if (attackRange <= _ability.attackRange && !isAttack)
+            {
+                StartCoroutine("AttackToTarget");
+                isAttack = true;
+            }
+            else if (attackRange > _ability.attackRange && isAttack)
+            {
+                StopCoroutine("AttackToTarget");
+                isAttack = false;
+            }
         }
-        else if (attackRange > _ability.attackRange && isAttack)
-        {
-            StopCoroutine("AttackToTarget");
-            isAttack = false;
-        }
+        
     }
 
     private IEnumerator AttackToTarget()
