@@ -177,6 +177,8 @@ MonoBehaviour:
   gameClearUI: {fileID: 395473359}
   gameClear_curScore: {fileID: 545877670}
   gameClear_bestScore: {fileID: 307661040}
+  pauseBtn: {fileID: 0}
+  resumeBtn: {fileID: 0}
 --- !u!1 &18617990
 GameObject:
   m_ObjectHideFlags: 0
