@@ -5,10 +5,15 @@ using UnityEngine;
 public class TowerPosition : MonoBehaviour
 {
     [SerializeField] UIManager UIMgr;
+    GameObject _selectTowerPoint;
+    //public GameObject shopPanel;
+
+    //bool isClosedShop = true;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        _selectTowerPoint= transform.Find("SelectTowerPoint").gameObject;
     }
 
     // Update is called once per frame
@@ -19,6 +24,12 @@ public class TowerPosition : MonoBehaviour
 
     private void OnMouseDown()
     {
-        UIMgr.SetTarget(this.transform);
+        UIMgr.SetTarget(this);
+        _selectTowerPoint.SetActive(true);
+    }
+
+    public void ClosePoint()
+    {
+        _selectTowerPoint.SetActive(false);
     }
 }
