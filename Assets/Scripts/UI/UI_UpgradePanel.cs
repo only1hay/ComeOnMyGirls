@@ -12,7 +12,7 @@ public class UI_UpgradePanel : MonoBehaviour
         //CloseUpgrade();
     }
 
-    public void OpenUpgrade(Transform tower)
+    public void OpenUpgrade()
     {
         gameObject.SetActive(true);
         //transform.position = mainCamera.WorldToScreenPoint(towerPosition.position);

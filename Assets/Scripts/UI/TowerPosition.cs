@@ -24,6 +24,7 @@ public class TowerPosition : MonoBehaviour
 
     private void OnMouseDown()
     {
+        GameManager.instance.SetTowerPosition(this);
         UIMgr.SetTarget(this);
         _selectTowerPoint.SetActive(true);
     }

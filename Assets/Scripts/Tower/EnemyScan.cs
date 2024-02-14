@@ -9,11 +9,12 @@ public class EnemyScan : TowerController
 
     private void Update()
     {
-        EnemyRange();
+        /*EnemyRange();*/
     }
 
     private void EnemyRange()
     {
+
         Vector2 direction = Enemy.transform.position - transform.position;
         CallRotateTower(direction);
         CallAttackTower(direction);

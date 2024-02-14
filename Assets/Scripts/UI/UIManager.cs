@@ -25,14 +25,23 @@ public class UIManager : MonoBehaviour
         }
         this.towerPosition = _towerPosition;
         //transform.position = mainCamera.WorldToScreenPoint(target.position);
-        shopPanel.OpenShop();
+        if (towerPosition.transform.Find("Tower(Clone)"))
+        {
+            tower = towerPosition.transform.Find("Tower(Clone)").gameObject.transform;
+            SetTarget2();
+        }
+        else
+        {
+            shopPanel.OpenShop();
+        }
+        
     }
 
-    public void SetTarget2(Transform tower)
+    public void SetTarget2(/*Transform tower*/)
     {
-        this.tower = tower;
+        /*this.tower = tower;*/
         //transform.position = mainCamera.WorldToScreenPoint(tower.position);
-        upgradePanel.OpenUpgrade(tower);
+        upgradePanel.OpenUpgrade();
     }
 
     public void CloseShop()

@@ -11,7 +11,15 @@ public class Purchase : MonoBehaviour
     public TMP_Text money;
     //public GameObject shopPanel;
     //public GameObject upgradePanel;
+    [SerializeField]
+    private GameObject towerPrefab;
+    private GameObject towerPosition;
 
+
+    private void Awake()
+    {
+
+    }
     public void PurchaseGirls()
     {
         int intPurchasePrice = int.Parse(purchasePrice.text);
@@ -24,10 +32,17 @@ public class Purchase : MonoBehaviour
 
         //if (_shop == true)
         //{
-            if (intMoney >= intPurchasePrice)
+        towerPosition = GameManager.instance.GetTowerPosition();
+        if (intMoney >= intPurchasePrice)
+        {
+            
+            if (!towerPosition.transform.Find("Tower(Clone)"))
             {
                 intMoney -= intPurchasePrice;
+                SpawnTower();
             }
+                
+        }
         //}
         //if (_upgrade == true)
         //{
@@ -39,5 +54,12 @@ public class Purchase : MonoBehaviour
         //}
 
         money.text = intMoney.ToString();
+    }
+
+    private void SpawnTower()
+    {
+
+        GameObject Clone = Instantiate(towerPrefab, towerPosition.transform.position, towerPosition.transform.rotation);
+        Clone.transform.parent = towerPosition.transform;
     }
 }
