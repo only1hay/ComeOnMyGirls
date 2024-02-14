@@ -5,6 +5,7 @@ using UnityEngine;
 public class UI_ShopPanel : MonoBehaviour
 {
     Camera mainCamera;
+    public GameObject selectTowerPoint;
 
     public void Init()
     {
@@ -22,5 +23,6 @@ public class UI_ShopPanel : MonoBehaviour
     public void CloseShop()
     {
         gameObject.SetActive(false);
+        selectTowerPoint.SetActive(false);
     }
 }
