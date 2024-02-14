@@ -16,5 +16,6 @@ public class EnemyScan : TowerController
     {
         Vector2 direction = Enemy.transform.position - transform.position;
         CallRotateTower(direction);
+        CallAttackTower(direction);
     }
 }

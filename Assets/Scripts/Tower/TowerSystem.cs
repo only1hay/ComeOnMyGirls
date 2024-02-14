@@ -15,6 +15,8 @@ public class TowerSystem : MonoBehaviour
     private void Setup()
     {
         _ability.attackRange = 2f;
+        _ability.bulletDamage = 1f;
+        _ability.attackSpeed = 1f;
     }
 
 }
