@@ -61,6 +61,6 @@ public class TowerAttack : MonoBehaviour
 
     private void SpawnBullet()
     {
-        Instantiate(bullet, spawnPoint.position, Quaternion.identity);
+        Instantiate(bullet, spawnPoint.position,spawnPoint.rotation);
     }
 }
