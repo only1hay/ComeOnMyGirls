@@ -24,6 +24,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gameClear_curScore;
     [SerializeField] private TextMeshProUGUI gameClear_bestScore;
 
+    [Header("UI")]
+    [SerializeField] private GameObject pauseBtn;
+    [SerializeField] private GameObject resumeBtn;
+
     [HideInInspector]
     private int curTIL;
     private int killScore;
@@ -69,6 +73,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0.0f;
+        pauseBtn.SetActive(false);
+        resumeBtn.SetActive(false);
         gameOver_curKillScore.text = killScore.ToString();
         if (PlayerPrefs.HasKey("bestkillScore") == false)
         {
@@ -88,6 +94,8 @@ public class GameManager : MonoBehaviour
     public void GameClear()
     {
         Time.timeScale = 0.0f;
+        pauseBtn.SetActive(false);
+        resumeBtn.SetActive(false);
         clearScore = killScore + (40 - curTIL);
         gameClear_curScore.text = clearScore.ToString();
         if (PlayerPrefs.HasKey("bestScore") == false)
