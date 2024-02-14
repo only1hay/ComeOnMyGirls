@@ -9,7 +9,7 @@ public class UI_UpgradePanel : MonoBehaviour
     public void Init()
     {
         mainCamera = Camera.main;
-        CloseUpgrade();
+        //CloseUpgrade();
     }
 
     public void OpenUpgrade(Transform tower)
