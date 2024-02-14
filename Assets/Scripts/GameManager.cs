@@ -112,6 +112,6 @@ public class GameManager : MonoBehaviour
 
     public void GoToTitle()
     {
-        SceneManager.LoadScene("SHWScene");
+        SceneManager.LoadScene("StartScene");
     }
 }
