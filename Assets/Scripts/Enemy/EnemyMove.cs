@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// 葛电 利俊 胶农赋飘 利侩
+// 氇摖 鞝侅棎 鞀ろ伂毽巾姼 鞝侅毄
 
-// 利狼 框流烙 力绢
+// 鞝侅潣 鞗�歆侅瀯 鞝滌柎
 
 public class EnemyMove : MonoBehaviour
 {
@@ -16,7 +16,7 @@ public class EnemyMove : MonoBehaviour
         this.transform.position += direction * speed * Time.deltaTime;
     }
 
-    // 利狼 促澜 框流烙
+    // 鞝侅潣 雼れ潓 鞗�歆侅瀯
     public void Move(Vector3 _direction)
     {
         direction = _direction;

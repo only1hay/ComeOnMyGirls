@@ -2,33 +2,42 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// ¸ğµç Àû¿¡ ½ºÅ©¸³Æ® Àû¿ë
+// ëª¨ë“  ì ì— ìŠ¤í¬ë¦½íŠ¸ ì ìš©
+// ì  í”„ë¦¬í©ì— hp, reward ì„¤ì •
 
-// Àû ÃÊ±âÈ­, ÇöÀç ¿òÁ÷ÀÓ°ú ´ÙÀ½ ¿òÁ÷ÀÓ Á¦¾î
+// ëª¨ë“  ì  í”„ë¦¬í©ì— Enemy Tag ì„¤ì •
+
+// ì  ì´ˆê¸°í™”, í˜„ì¬ ì›€ì§ì„ê³¼ ë‹¤ìŒ ì›€ì§ì„ ì œì–´
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField] private int hp = 1;
+    [SerializeField] private int reward = 100;
+
     private Transform[] wayPoints;
     private int wayPointCount;
     private int idx = 0;
-    private EnemyMove enemyMove;
 
-    // Àû ÃÊ±âÈ­
+    private EnemyMove enemyMove;
+    private EnemySpawn enemySpawn;
+
+    // ì  ì´ˆê¸°í™”
     public void Init(Transform[] _wayPoints)
     {
         enemyMove = GetComponent<EnemyMove>();
+        enemySpawn = GameObject.FindGameObjectWithTag("SpawnPoint").GetComponent<EnemySpawn>();
 
         wayPointCount = _wayPoints.Length;
         this.wayPoints = new Transform[wayPointCount];
         this.wayPoints = _wayPoints;
 
-        // Àû À§Ä¡ ¼³Á¤(spawn À§Ä¡·Î)
+        // ì  ìœ„ì¹˜ ì„¤ì •(spawn ìœ„ì¹˜ë¡œ)
         transform.position = _wayPoints[idx].position;
 
-        StartCoroutine("EnemyMove");
+        StartCoroutine(EnemyMove());
     }
 
-    // Àû ¿òÁ÷ÀÓ
+    // ì  ì›€ì§ì„
     private IEnumerator EnemyMove()
     {
         NextMove();
@@ -44,7 +53,7 @@ public class Enemy : MonoBehaviour
         }
     }
 
-    // ÀûÀÇ ´ÙÀ½ ¿òÁ÷ÀÓ
+    // ì ì˜ ë‹¤ìŒ ì›€ì§ì„
     private void NextMove()
     {
         if (idx < wayPointCount - 1)
@@ -57,7 +66,22 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            // @@@@@ ì„±ì— ë‹¿ì•˜ì„ ë•Œ TIL ì¶”ê°€ë˜ëŠ” ê²ƒ í™•ì¸í•˜ê¸°!!!!!
+            enemySpawn.EnemyDie(this, gameObject);
         }
+    }
+
+    // ì ì´ ê³µê²© ë°›ì•˜ì„ ë•Œ
+    private void EnemyAttacked(int _damage)
+    {
+        // ì ì˜ hpê°€ 0ì´ë©´ 
+        if(hp == 0)
+        {
+            // @@@@@ë¦¬ì›Œë“œ ì¶”ê°€ êµ¬í˜„í•˜ê¸°!!!!!
+
+            enemySpawn.EnemyDie(this, gameObject);
+        }
+
+        hp -= _damage;
     }
 }
