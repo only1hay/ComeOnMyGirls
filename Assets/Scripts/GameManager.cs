@@ -29,11 +29,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject resumeBtn;
 
     [HideInInspector]
-    private int curTIL;
-    private int killScore;
-    private int ownedGold;
-    private int clearScore;
-    private int curRound;
+    public int curTIL;
+    public int killScore;
+    public int ownedGold;
+    public int clearScore;
+    public int curRound;
 
     [Header("TowerPosition")]
     [SerializeField] private GameObject TowerPosition;
@@ -53,14 +53,13 @@ public class GameManager : MonoBehaviour
         curRound = 0;
     }
 
-    /*private void Update()
+    private void Update()
     {
         curTILText.text = curTIL.ToString();
         killScoreText.text = killScore.ToString();
         ownedGoldText.text = ownedGold.ToString();
         curRoundText.text = curRound.ToString();
-
-    }*/
+    }
 
     public void AddTIL()
     {

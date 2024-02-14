@@ -68,6 +68,7 @@ public class Enemy : MonoBehaviour
         {
             // @@@@@ 성에 닿았을 때 TIL 추가되는 것 확인하기!!!!!
             enemySpawn.EnemyDie(this, gameObject);
+            GameManager.instance.AddTIL();
         }
     }
 
