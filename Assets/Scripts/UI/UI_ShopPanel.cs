@@ -5,15 +5,16 @@ using UnityEngine;
 public class UI_ShopPanel : MonoBehaviour
 {
     Camera mainCamera;
-    public GameObject selectTowerPoint;
+    //public GameObject selectTowerPoint;
+    UIManager _UImanager;
 
-    public void Init()
+    public void Init(UIManager uIManager)
     {
+        _UImanager = uIManager;
         mainCamera = Camera.main;
-        CloseShop();
     }
 
-    public void OpenShop(Transform towerPosition)
+    public void OpenShop()
     {
         gameObject.SetActive(true);
         //transform.position = mainCamera.WorldToScreenPoint(towerPosition.position);
@@ -23,6 +24,7 @@ public class UI_ShopPanel : MonoBehaviour
     public void CloseShop()
     {
         gameObject.SetActive(false);
-        selectTowerPoint.SetActive(false);
+        //selectTowerPoint.SetActive(false);
+        _UImanager.CloseShop();
     }
 }

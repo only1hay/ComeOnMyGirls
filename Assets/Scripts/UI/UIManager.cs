@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] Transform towerPosition;
+    [SerializeField] TowerPosition towerPosition;
     [SerializeField] Transform tower;
     Camera mainCamera;
 
@@ -14,14 +14,14 @@ public class UIManager : MonoBehaviour
 
     void Awake()
     {
-        shopPanel.Init();
+        shopPanel.Init(this);
     }
 
-    public void SetTarget(Transform towerPosition)
+    public void SetTarget(TowerPosition towerPosition)
     {
         this.towerPosition = towerPosition;
         //transform.position = mainCamera.WorldToScreenPoint(target.position);
-        shopPanel.OpenShop(towerPosition);
+        shopPanel.OpenShop();
     }
 
     public void SetTarget2(Transform tower)
@@ -29,5 +29,10 @@ public class UIManager : MonoBehaviour
         this.tower = tower;
         //transform.position = mainCamera.WorldToScreenPoint(tower.position);
         upgradePanel.OpenUpgrade(tower);
+    }
+
+    public void CloseShop()
+    {
+        towerPosition.ClosePoint();
     }
 }
