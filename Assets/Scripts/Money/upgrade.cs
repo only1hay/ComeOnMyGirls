@@ -60,11 +60,6 @@ public class upgrade : MonoBehaviour
         //GameObject.Find("SpawnPoint").GetComponent<TowerSpanwer>().UpgradeTower1(towerPosition);
     }
 
-    private void Update()
-    {
-        upgradePrice.text = $"{(int)towerAbility.bulletDamage * 500}";
-    }
-
     private void Awake()
     {
         towerSystem = _UIManager.GetSelectTowerSystem();
