@@ -10,6 +10,12 @@ public class Purchase : MonoBehaviour
     [SerializeField]
     private GameObject towerPrefab;
     private GameObject towerPosition;
+    private EnemySpawn enemySpawn;
+
+    private void Awake()
+    {
+        enemySpawn = GetComponent <EnemySpawn>();
+    }
 
     public void PurchaseGirls()
     {
@@ -30,5 +36,6 @@ public class Purchase : MonoBehaviour
     {
         GameObject Clone = Instantiate(towerPrefab, towerPosition.transform.position, towerPosition.transform.rotation);
         Clone.transform.parent = towerPosition.transform;
+        Clone.GetComponent<TowerAttack>().Setup(enemySpawn);
     }
 }
