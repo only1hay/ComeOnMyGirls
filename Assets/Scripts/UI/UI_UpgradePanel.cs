@@ -11,6 +11,7 @@ public class UI_UpgradePanel : MonoBehaviour
     [SerializeField] private Image Image1;
     [SerializeField] private Image Image2;
     [SerializeField] private Image Image3;
+    [SerializeField] private Image _image;
     
 
 
@@ -29,9 +30,9 @@ public class UI_UpgradePanel : MonoBehaviour
         string strType = _gameObject.transform.Find("Tower").GetComponent<TowerAbility>().type.ToString();
         switch (strType)
         {
-            case "Nomal": transform.Find("Background").transform.Find("ImageBackGround").GetComponent<Image>().sprite = Image1.sprite; break;
-            case "Laser": transform.Find("Background").transform.Find("ImageBackGround").GetComponent<Image>().sprite = Image2.sprite; break;
-            case "Bomb": transform.Find("Background").transform.Find("ImageBackGround").GetComponent<Image>().sprite = Image3.sprite; break;
+            case "Nomal": _image.sprite = Image1.sprite; break;
+            case "Laser": _image.sprite = Image2.sprite; break;
+            case "Bomb": _image.sprite = Image3.sprite; break;
         }
         //transform.position = mainCamera.WorldToScreenPoint(towerPosition.position);
     }
