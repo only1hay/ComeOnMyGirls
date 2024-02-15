@@ -27,12 +27,17 @@ public class GameManager : MonoBehaviour
     [Header("UI")]
     [SerializeField] private GameObject pauseBtn;
     [SerializeField] private GameObject resumeBtn;
+    [SerializeField] private GameObject TopPanel;
 
     [HideInInspector]
     public int curTIL;
+    [HideInInspector]
     public int killScore;
+    [HideInInspector]
     public int ownedGold;
+    [HideInInspector]
     public int clearScore;
+    [HideInInspector]
     public int curRound;
 
     [Header("TowerPosition")]
@@ -52,7 +57,7 @@ public class GameManager : MonoBehaviour
         killScore = 0;
         clearScore = 0;
         ownedGold = 10000;
-        curRound = 0;
+        curRound = 1;
     }
 
     private void Update()
@@ -78,6 +83,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0.0f;
         pauseBtn.SetActive(false);
         resumeBtn.SetActive(false);
+        TopPanel.SetActive(false);
         gameOver_curKillScore.text = killScore.ToString();
         if (PlayerPrefs.HasKey("bestkillScore") == false)
         {
@@ -96,10 +102,12 @@ public class GameManager : MonoBehaviour
 
     public void GameClear()
     {
+        curRound = 5;
         Time.timeScale = 0.0f;
         pauseBtn.SetActive(false);
         resumeBtn.SetActive(false);
-        clearScore = killScore + (40 - curTIL);
+        TopPanel.SetActive(false);
+        clearScore = killScore + (40 - curTIL) + (int)(ownedGold * 0.9f);
         gameClear_curScore.text = clearScore.ToString();
         if (PlayerPrefs.HasKey("bestScore") == false)
         {

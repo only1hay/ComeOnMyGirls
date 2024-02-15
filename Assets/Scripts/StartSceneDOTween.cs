@@ -9,6 +9,7 @@ public class StartSceneDOTween : MonoBehaviour
     [SerializeField] private TextMeshProUGUI cMonTxt;
     [SerializeField] private TextMeshProUGUI myGirlsTxt;
     [SerializeField] Animator animator;
+    [SerializeField] AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +29,7 @@ public class StartSceneDOTween : MonoBehaviour
         myGirlsTxt.transform.DOLocalMoveY(250, 1f).SetEase(Ease.OutBounce);
         yield return new WaitForSeconds(1f);
         animator.SetBool("isEnded", true);
+        yield return new WaitForSeconds(1f);
+        audioSource.Play();
     }
 }
