@@ -13,6 +13,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI ownedGoldText;
     [SerializeField] private TextMeshProUGUI killScoreText;
     [SerializeField] private TextMeshProUGUI curRoundText;
+    [SerializeField] private AudioClip WinMusic;
+    [SerializeField] private AudioClip LoseMusic;
+    [SerializeField] private AudioSource audioSource;
 
     [Header("Game Over Menu")]
     [SerializeField] private GameObject gameOverUI;
@@ -39,6 +42,8 @@ public class GameManager : MonoBehaviour
     public int clearScore;
     [HideInInspector]
     public int curRound;
+
+    public BGManager bgManager;
 
     [Header("TowerPosition")]
     [SerializeField] private GameObject TowerPosition;
@@ -81,6 +86,8 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         Time.timeScale = 0.0f;
+        bgManager.audioSource.Stop();
+        audioSource.PlayOneShot(LoseMusic);
         pauseBtn.SetActive(false);
         resumeBtn.SetActive(false);
         TopPanel.SetActive(false);
@@ -104,6 +111,8 @@ public class GameManager : MonoBehaviour
     {
         curRound = 5;
         Time.timeScale = 0.0f;
+        bgManager.audioSource.Stop();
+        audioSource.PlayOneShot(WinMusic);
         pauseBtn.SetActive(false);
         resumeBtn.SetActive(false);
         TopPanel.SetActive(false);
