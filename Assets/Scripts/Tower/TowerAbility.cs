@@ -15,5 +15,5 @@ public class TowerAbility : MonoBehaviour
     public Type type;
     public float attackSpeed;
     public float attackRange;
-    public float bulletDamage;
+    public int bulletDamage;
 }   

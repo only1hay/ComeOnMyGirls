@@ -77,7 +77,7 @@ public class Enemy : MonoBehaviour
         hp -= _damage;
 
         // 적의 hp가 0이면 
-        if (hp == 0)
+        if (hp <= 0)
         {
             enemySpawn.EnemyDie(this, gameObject);
             GameManager.instance.AddGold();

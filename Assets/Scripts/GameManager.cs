@@ -43,6 +43,8 @@ public class GameManager : MonoBehaviour
     [Header("TowerPosition")]
     [SerializeField] private GameObject TowerPosition;
 
+
+
     private void Awake()
     {
         instance = this;

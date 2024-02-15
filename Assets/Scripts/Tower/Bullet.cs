@@ -16,8 +16,8 @@ public class Bullet : MonoBehaviour
     {
         if (collision.CompareTag("Enemy"))
         {
-
-            collision.gameObject.GetComponent<Enemy>().EnemyAttacked(1);
+            int damage = transform.parent.GetComponent<TowerAbility>().bulletDamage;
+            collision.gameObject.GetComponent<Enemy>().EnemyAttacked(damage);
             Destroy(gameObject);
         }
     }
