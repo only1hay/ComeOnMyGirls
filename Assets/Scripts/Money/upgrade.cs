@@ -6,13 +6,27 @@ using UnityEngine;
 
 public class upgrade : MonoBehaviour
 {
+
     //tower 각각의 price를 가져와야 함.
     [SerializeField] UIManager _UIManager;
-    public TMP_Text upgradePrice;
+    public TMP_Text money;
+    public TMP_Text upgradePrice; //tower 각각의 price를 가져와야 함.
+    private GameObject towerPosition;
+    private TowerAbility _ability;
+
+
 
 
     TowerSystem towerSystem;
     TowerAbility towerAbility;
+
+    // Update is called once per frame
+    void Update()
+    {
+        towerPosition = GameManager.instance.GetTowerPosition();
+        upgradePrice.text = (towerPosition.transform.Find("Tower(Clone)").GetComponent<TowerAbility>().bulletDamage * 500).ToString();
+    }
+
 
     public void UpgradeGirls()
     {

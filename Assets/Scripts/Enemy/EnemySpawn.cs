@@ -48,6 +48,8 @@ public class EnemySpawn : MonoBehaviour
         // 현재 wave에 아직 스폰해야할 적이 남아있다면
         while (spawnEnemyCount < wave.maxWaveEnemyCount)
         {
+            spawnEnemyCount++;
+
             int idx = Random.Range(0, 3); // @@@@@이거 Length로 바꿔보기(라운드 당 몬스터 종류 제어)!!!!!
             GameObject clone = Instantiate(enemyPrefabs[idx], this.transform.position, Quaternion.identity);
             Enemy enemy = clone.GetComponent<Enemy>();
@@ -58,8 +60,6 @@ public class EnemySpawn : MonoBehaviour
             float spawnTime = Random.Range(1, 4);
             yield return new WaitForSeconds(spawnTime);
         }
-
-        wave.StartGame();
     }
 
     // 적이 죽었을 때
@@ -71,5 +71,11 @@ public class EnemySpawn : MonoBehaviour
         enemyList.Remove(_enemy);
         // 적 삭제
         Destroy(_gameObject);
+
+        // enemyList가 비었을 때
+        if (enemyList.Count == 0)
+        {
+            wave.NextWave();
+        }
     }
 }
