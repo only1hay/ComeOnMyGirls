@@ -179,6 +179,7 @@ MonoBehaviour:
   gameClear_bestScore: {fileID: 307661040}
   pauseBtn: {fileID: 1251773339}
   resumeBtn: {fileID: 440041404}
+  TopPanel: {fileID: 1655791491}
   curTIL: 0
   killScore: 0
   ownedGold: 0
@@ -1946,7 +1947,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3b88911e556e245bfe079a6b890013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves: 5
+  maxWave: 5
+  waveIdx: 0
   maxWaveEnemyCount: 40
 --- !u!114 &159482899
 MonoBehaviour:

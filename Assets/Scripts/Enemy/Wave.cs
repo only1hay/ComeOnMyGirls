@@ -36,6 +36,11 @@ public class Wave : MonoBehaviour
         {
             waveIdx++;
             enemySpawn.StartWave(waveIdx);
+            GameManager.instance.curRound++;
+        }
+        if (maxWave + 1 <= waveIdx)
+        {
+            GameManager.instance.GameClear();
         }
     }
 }
