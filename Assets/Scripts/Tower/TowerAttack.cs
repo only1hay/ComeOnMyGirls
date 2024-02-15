@@ -97,6 +97,7 @@ public class TowerAttack : MonoBehaviour
     private void SpawnBullet()
     {
         GameObject bulletClone =  Instantiate(bullet,spawnPoint.transform.position,spawnPoint.transform.rotation);
+        bulletClone.transform.parent = transform;
         Destroy(bulletClone, 5f);
     }
 }
