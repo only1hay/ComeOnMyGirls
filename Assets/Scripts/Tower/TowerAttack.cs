@@ -10,6 +10,7 @@ public enum TowerState
 
 public class TowerAttack : MonoBehaviour
 {
+    [SerializeField] GameObject bullet;
     [SerializeField] GameObject topSprite;
     [SerializeField] TowerState state = TowerState.SetTarget;
     [SerializeField] Transform spawnPoint;
@@ -17,8 +18,10 @@ public class TowerAttack : MonoBehaviour
     private TowerAbility _ability;
     private EnemySpawn enemySpawn;
 
+
     public void Setup(EnemySpawn enemySpawn)
     {
+        _ability = GetComponent<TowerAbility>();
         this.enemySpawn = enemySpawn;
         ChangeState(TowerState.SetTarget);
     }
@@ -86,11 +89,14 @@ public class TowerAttack : MonoBehaviour
             }
 
             yield return new WaitForSeconds(_ability.attackSpeed);
+
+            SpawnBullet();
         }
     }
 
     private void SpawnBullet()
     {
-
+        GameObject bulletClone =  Instantiate(bullet,spawnPoint.transform.position,spawnPoint.transform.rotation);
+        Destroy(bulletClone, 5f);
     }
 }

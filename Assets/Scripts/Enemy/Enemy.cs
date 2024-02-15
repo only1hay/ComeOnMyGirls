@@ -73,10 +73,12 @@ public class Enemy : MonoBehaviour
     }
 
     // 적이 공격 받았을 때
-    private void EnemyAttacked(int _damage)
+    public void EnemyAttacked(int _damage)
     {
+
+        hp -= _damage;
         // 적의 hp가 0이면 
-        if(hp == 0)
+        if (hp == 0)
         {
             // @@@@@리워드 추가 구현하기!!!!!
 
@@ -84,6 +86,6 @@ public class Enemy : MonoBehaviour
             GameManager.instance.AddGold();
         }
 
-        hp -= _damage;
+
     }
 }
