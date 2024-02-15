@@ -181,4 +181,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 8907272676686678703}
-  speed: 1.5
+  speed: 0.8

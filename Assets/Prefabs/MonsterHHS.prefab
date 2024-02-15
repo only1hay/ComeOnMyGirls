@@ -166,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d54510812cec51546a3086bedbdfda64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 2
   reward: 100
 --- !u!114 &7510539886251323014
 MonoBehaviour:
@@ -181,4 +181,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 2246643982780112577}
-  speed: 1
+  speed: 0.6
