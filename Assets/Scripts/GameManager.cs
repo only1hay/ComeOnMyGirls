@@ -29,13 +29,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject resumeBtn;
     [SerializeField] private GameObject TopPanel;
 
-    //[HideInInspector]
+    [HideInInspector]
     public int curTIL;
-    //[HideInInspector]
+    [HideInInspector]
     public int killScore;
-    //[HideInInspector]
+    [HideInInspector]
     public int ownedGold;
-    //[HideInInspector]
+    [HideInInspector]
     public int clearScore;
     [HideInInspector]
     public int curRound;
