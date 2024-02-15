@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 2
-  reward: 100
+  reward: 50
 --- !u!114 &7510539886251323014
 MonoBehaviour:
   m_ObjectHideFlags: 0
