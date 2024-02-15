@@ -22,6 +22,7 @@ public class Enemy : MonoBehaviour
     private EnemySpawn enemySpawn;
     private Wave wave;
 
+    bool isDead = false;
     // 적 초기화
     public void Init(Transform[] _wayPoints)
     {
@@ -82,12 +83,16 @@ public class Enemy : MonoBehaviour
     {
         hp -= _damage;
 
-        // 적의 hp가 0이면 
         if (hp <= 0)
         {
-            enemySpawn.EnemyDie(this, gameObject);
-            GameManager.instance.AddGold();
-            GameManager.instance.AddKillScore();
+            if (isDead == false)
+            {
+                isDead = true;
+                enemySpawn.EnemyDie(this, gameObject);
+                GameManager.instance.AddGold();
+                GameManager.instance.AddKillScore();
+            }
         }
+
     }
 }
