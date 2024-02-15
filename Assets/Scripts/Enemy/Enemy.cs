@@ -8,6 +8,7 @@ using UnityEngine;
 // 모든 적 프리펩에 Enemy Tag 설정
 
 // 적 초기화, 현재 움직임과 다음 움직임 제어
+// 적 공격 받았을 때 제어
 
 public class Enemy : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class Enemy : MonoBehaviour
         // 적 위치 설정(spawn 위치로)
         transform.position = _wayPoints[idx].position;
 
+        // 코루틴 시작
         StartCoroutine(EnemyMove());
     }
 
@@ -63,6 +65,7 @@ public class Enemy : MonoBehaviour
     // 적의 다음 움직임
     private void NextMove()
     {
+        // 다음 wayPoint가 있을 때
         if (idx < wayPointCount - 1)
         {
             this.transform.position = wayPoints[idx].position;
@@ -71,6 +74,7 @@ public class Enemy : MonoBehaviour
             Vector3 direction = (wayPoints[idx].position - this.transform.position).normalized;
             enemyMove.MoveDirection(direction);
         }
+        // 마지막 wayPoint에 도착했을 때
         else
         {
             enemySpawn.EnemyDie(this, gameObject);
@@ -83,6 +87,7 @@ public class Enemy : MonoBehaviour
     {
         hp -= _damage;
 
+        // 적이 죽었을 때
         if (hp <= 0)
         {
             if (isDead == false)
@@ -93,6 +98,5 @@ public class Enemy : MonoBehaviour
                 GameManager.instance.AddKillScore();
             }
         }
-
     }
 }

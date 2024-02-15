@@ -37,6 +37,8 @@ public class EnemySpawn : MonoBehaviour
     public void StartWave(int _wave)
     {
         enemyCount = wave.maxWaveEnemyCount;
+
+        // 코루틴 시작
         StartCoroutine(SpawnEnemy());
     }
 
@@ -51,7 +53,7 @@ public class EnemySpawn : MonoBehaviour
         {
             spawnEnemyCount++;
 
-            waveRandomrEnemy();
+            waveRandomEnemy();
 
             float spawnTime = Random.Range(1, 4);
             yield return new WaitForSeconds(spawnTime);
@@ -59,13 +61,16 @@ public class EnemySpawn : MonoBehaviour
     }
 
     // wave 마다 새로운 적 생성
-    private void waveRandomrEnemy()
+    private void waveRandomEnemy()
     {
         int idx = 0;
+
+        // wave가 2 이하일 때
         if (wave.waveIdx < 3)
         {
             idx = Random.Range(0, wave.waveIdx);
         }
+        // wave가 3 이상일 때
         else
         {
             idx = Random.Range(0, 3);
