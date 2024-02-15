@@ -28,12 +28,12 @@ public class TowerSystem : MonoBehaviour
                 break;
             case TowerAbility.Type.Laser:
                 _ability.attackRange = 5f;
-                _ability.attackSpeed = 0.1f;
+                _ability.attackSpeed = 0.2f;
                 _ability.bulletDamage = 0.2f;
                 break;
             case TowerAbility.Type.Bomb:
                 _ability.attackRange = 5f;
-                _ability.attackSpeed = 5f;
+                _ability.attackSpeed = 3f;
                 _ability.bulletDamage = 10;
                 break;
             default:
