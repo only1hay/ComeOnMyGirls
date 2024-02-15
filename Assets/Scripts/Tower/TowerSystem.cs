@@ -11,6 +11,11 @@ public class TowerSystem : MonoBehaviour
         _ability = GetComponent<TowerAbility>();
     }
 
+    public TowerAbility GetTowerAbility()
+    {
+        return _ability;
+    }
+
     private void Start()
     {
         Setup();

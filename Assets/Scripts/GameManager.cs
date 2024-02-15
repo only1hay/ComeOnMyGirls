@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         curTIL = 0;
         killScore = 0;
         clearScore = 0;
-        ownedGold = 10000;
+        ownedGold = 1000000;
         curRound = 0;
     }
 

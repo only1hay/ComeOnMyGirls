@@ -10077,7 +10077,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 500
+  m_text: 0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: e736ecd235eb7fe439b0ea28003f0894, type: 2}
   m_sharedMaterial: {fileID: 2983953584819802762, guid: e736ecd235eb7fe439b0ea28003f0894, type: 2}
@@ -13068,7 +13068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28c14080b0b8bcb4ba7e525ced12d6f8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: {fileID: 375081627}
+  _UIManager: {fileID: 1766604734}
   upgradePrice: {fileID: 989476598}
 --- !u!114 &1184120927
 MonoBehaviour:
@@ -21503,7 +21503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   towerPosition: {fileID: 0}
-  tower: {fileID: 0}
+  selectTower: {fileID: 0}
   shopPanel: {fileID: 1919097890}
   topPanel: {fileID: 1655791493}
   upgradePanel: {fileID: 2129388486}
