@@ -1949,7 +1949,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxWave: 5
   waveIdx: 0
-  maxWaveEnemyCount: 40
+  maxWaveEnemyCount: 5
 --- !u!114 &159482899
 MonoBehaviour:
   m_ObjectHideFlags: 0
