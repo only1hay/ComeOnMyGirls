@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4294877136043188510}
   - component: {fileID: 1421663045224356544}
+  - component: {fileID: 8907272676686678703}
+  - component: {fileID: 5503636572833435827}
   - component: {fileID: -2992979693530091696}
   - component: {fileID: 5994196472712818026}
-  - component: {fileID: 5503636572833435827}
   m_Layer: 0
   m_Name: MonsterLHS
   m_TagString: Enemy
@@ -87,33 +88,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-2992979693530091696
-MonoBehaviour:
+--- !u!95 &8907272676686678703
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9025440588175366955}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d54510812cec51546a3086bedbdfda64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 3
-  reward: 250
---- !u!114 &5994196472712818026
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9025440588175366955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16da768059ef19143ac0c1a35b0a10b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 9225b18eda841fb45be39f0ce31505b1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &5503636572833435827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,3 +154,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-2992979693530091696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9025440588175366955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54510812cec51546a3086bedbdfda64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 3
+  reward: 250
+--- !u!114 &5994196472712818026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9025440588175366955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16da768059ef19143ac0c1a35b0a10b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 8907272676686678703}
+  speed: 2

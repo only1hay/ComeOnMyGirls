@@ -10,9 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3143715804711179124}
   - component: {fileID: 8898018933164144987}
+  - component: {fileID: 5518100051964123221}
+  - component: {fileID: 547854266787508492}
   - component: {fileID: 5404921960454718567}
   - component: {fileID: 555564316144088668}
-  - component: {fileID: 547854266787508492}
   m_Layer: 0
   m_Name: MonsterTIL
   m_TagString: Enemy
@@ -33,7 +34,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &8898018933164144987
 SpriteRenderer:
@@ -87,33 +88,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5404921960454718567
-MonoBehaviour:
+--- !u!95 &5518100051964123221
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7307486678391249226}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d54510812cec51546a3086bedbdfda64, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hp: 5
-  reward: 500
---- !u!114 &555564316144088668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7307486678391249226}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16da768059ef19143ac0c1a35b0a10b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: de66b629b74f1614096667e582f3cc0f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!61 &547854266787508492
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,3 +154,31 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &5404921960454718567
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7307486678391249226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d54510812cec51546a3086bedbdfda64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 5
+  reward: 500
+--- !u!114 &555564316144088668
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7307486678391249226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16da768059ef19143ac0c1a35b0a10b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  anim: {fileID: 5518100051964123221}
+  speed: 2
