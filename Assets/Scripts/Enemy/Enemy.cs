@@ -20,16 +20,22 @@ public class Enemy : MonoBehaviour
 
     private EnemyMove enemyMove;
     private EnemySpawn enemySpawn;
+    private Wave wave;
 
     // 적 초기화
     public void Init(Transform[] _wayPoints)
     {
         enemyMove = GetComponent<EnemyMove>();
         enemySpawn = GameObject.FindGameObjectWithTag("SpawnPoint").GetComponent<EnemySpawn>();
+        wave = GameObject.FindGameObjectWithTag("SpawnPoint").GetComponent<Wave>();
 
         wayPointCount = _wayPoints.Length;
         this.wayPoints = new Transform[wayPointCount];
         this.wayPoints = _wayPoints;
+
+        // wave 마다 적의 스탯 초기화
+        hp *= wave.waveIdx;
+        enemyMove.speed *= wave.waveIdx;
 
         // 적 위치 설정(spawn 위치로)
         transform.position = _wayPoints[idx].position;
