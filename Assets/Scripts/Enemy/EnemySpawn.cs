@@ -63,13 +63,13 @@ public class EnemySpawn : MonoBehaviour
     }
 
     // 적이 죽었을 때
-    public void EnemyDie(Enemy _enemy, GameObject gameObject)
+    public void EnemyDie(Enemy _enemy, GameObject _gameObject)
     {
         // 현재 wave의 적 숫자 감소
         enemyCount--;
         // enemyList에서 적 정보 삭제
         enemyList.Remove(_enemy);
         // 적 삭제
-        Destroy(gameObject);
+        Destroy(_gameObject);
     }
 }
