@@ -23,6 +23,10 @@ public class UI_UpgradePanel : MonoBehaviour
 
     public void CloseUpgrade()
     {
-        gameObject.SetActive(false);
+        if (gameObject.activeSelf == true)
+        {
+            gameObject.SetActive(false);
+        }
+        
     }
 }

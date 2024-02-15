@@ -12,6 +12,7 @@ public class UIManager : MonoBehaviour
     public UI_TopPanel topPanel;
     public UI_UpgradePanel upgradePanel;
 
+
     void Awake()
     {
         shopPanel.Init(this);
