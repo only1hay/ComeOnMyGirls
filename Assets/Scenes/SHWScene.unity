@@ -8642,7 +8642,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 437523638}
   moneyText: {fileID: 0}
-  towerPrefab: {fileID: 0}
 --- !u!114 &834827180
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9004,7 +9003,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 1315195414}
   moneyText: {fileID: 0}
-  towerPrefab: {fileID: 0}
 --- !u!114 &858563350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13194,7 +13192,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1184120926}
         m_TargetAssemblyTypeName: upgrade, Assembly-CSharp
-        m_MethodName: MinusMoney
+        m_MethodName: UpgradeGirls
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -16937,7 +16935,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 850938863}
   moneyText: {fileID: 375081627}
-  towerPrefab: {fileID: 0}
 --- !u!114 &1440314767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17921,7 +17918,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 975641368}
   moneyText: {fileID: 0}
-  towerPrefab: {fileID: 0}
 --- !u!114 &1612519688
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22449,7 +22445,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   purchasePrice: {fileID: 1801891236}
   moneyText: {fileID: 375081627}
-  towerPrefab: {fileID: 4078655389985731661, guid: 81d173263836ccd41884c6d0e7609f40, type: 3}
 --- !u!114 &1848829054
 MonoBehaviour:
   m_ObjectHideFlags: 0
