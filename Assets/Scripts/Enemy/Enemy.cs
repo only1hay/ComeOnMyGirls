@@ -62,7 +62,7 @@ public class Enemy : MonoBehaviour
 
             idx++;
             Vector3 direction = (wayPoints[idx].position - this.transform.position).normalized;
-            enemyMove.Move(direction);
+            enemyMove.MoveDirection(direction);
         }
         else
         {
