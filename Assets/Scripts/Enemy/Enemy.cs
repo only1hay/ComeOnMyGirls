@@ -66,7 +66,6 @@ public class Enemy : MonoBehaviour
         }
         else
         {
-            // @@@@@ 성에 닿았을 때 TIL 추가되는 것 확인하기!!!!!
             enemySpawn.EnemyDie(this, gameObject);
             GameManager.instance.AddTIL();
         }
@@ -75,18 +74,14 @@ public class Enemy : MonoBehaviour
     // 적이 공격 받았을 때
     public void EnemyAttacked(int _damage)
     {
-
         hp -= _damage;
+
         // 적의 hp가 0이면 
         if (hp == 0)
         {
-            // @@@@@리워드 추가 구현하기!!!!!
-
             enemySpawn.EnemyDie(this, gameObject);
             GameManager.instance.AddGold();
             GameManager.instance.AddKillScore();
         }
-
-
     }
 }
