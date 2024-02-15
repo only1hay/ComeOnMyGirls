@@ -26,13 +26,17 @@ public class Purchase : MonoBehaviour
             if (!towerPosition.transform.Find("Tower(Clone)"))
             {
                 GameManager.instance.ownedGold -= intPurchasePrice;
-                SpawnTower();
+                SpawnTower(intPurchasePrice);
             }
         }
     }
 
-    private void SpawnTower()
+    private void SpawnTower(int money)
     {
-        GameObject.Find("SpawnPoint").GetComponent<TowerSpanwer>().SpawnTower1(towerPosition.transform);
+        switch (money)
+        {
+            case 400: GameObject.Find("SpawnPoint").GetComponent<TowerSpanwer>().SpawnTower1(towerPosition.transform); break;
+        }
+        
     }
 }

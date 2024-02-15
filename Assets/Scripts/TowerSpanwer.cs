@@ -14,8 +14,15 @@ public class TowerSpanwer : MonoBehaviour
     }
     public void SpawnTower1(Transform transform)
     {
-        GameObject Clone =  Instantiate(Tower1, transform.position, Quaternion.identity);
+        GameObject Clone = Instantiate(Tower1, transform.position, Quaternion.identity);
         Clone.transform.parent = transform.transform;
         Clone.GetComponent<TowerAttack>().Setup(enemySpawn);
     }
+
+    public void UpgradeTower1()
+    {
+
+    }
+
 }
+
