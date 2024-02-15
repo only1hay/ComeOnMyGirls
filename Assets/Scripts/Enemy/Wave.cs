@@ -10,10 +10,10 @@ using UnityEngine;
 
 public class Wave : MonoBehaviour
 {
-    [SerializeField] private int waves = 5;
+    [SerializeField] private int maxWave = 5;
 
-    private int waveIdx = 0;
-    public int maxWaveEnemyCount = 40;
+    [SerializeField] private int waveIdx = 0;            
+    public int maxWaveEnemyCount = 40;  
 
     private EnemySpawn enemySpawn;
 
@@ -24,19 +24,18 @@ public class Wave : MonoBehaviour
 
     private void Start()
     {
-        StartGame();
+        waveIdx = 1;
+        enemySpawn.StartWave(waveIdx);
     }
 
     // 게임 시작
-    public void StartGame()
+    public void NextWave()
     {
         // 다음 웨이브로 넘어가야 할 때
-        if (enemySpawn.enemyList.Count == 0 && waveIdx < waves + 1)
+        if (enemySpawn.enemyList.Count == 0 && waveIdx < maxWave + 1)
         {
             waveIdx++;
-            enemySpawn.StartWave(waves);
+            enemySpawn.StartWave(waveIdx);
         }
-
-        // @@@@@ 게임 오버 구현!!!!!
     }
 }
