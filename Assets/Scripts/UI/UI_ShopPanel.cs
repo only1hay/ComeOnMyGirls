@@ -7,6 +7,7 @@ public class UI_ShopPanel : MonoBehaviour
     Camera mainCamera;
     //public GameObject selectTowerPoint;
     UIManager _UImanager;
+    public UI_UpgradePanel upgradePanel;
 
     public void Init(UIManager uIManager)
     {
@@ -18,6 +19,7 @@ public class UI_ShopPanel : MonoBehaviour
     {
         gameObject.SetActive(true);
         //transform.position = mainCamera.WorldToScreenPoint(towerPosition.position);
+        upgradePanel.gameObject.SetActive(false);
     }
     //타워포지션을 클릭하면 shopPanel활성화
 

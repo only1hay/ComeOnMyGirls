@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
         curTIL = 0;
         killScore = 0;
         clearScore = 0;
-        ownedGold = 1000;
+        ownedGold = 10000;
         curRound = 0;
     }
 
@@ -112,6 +112,11 @@ public class GameManager : MonoBehaviour
         }
         gameClear_bestScore.text = PlayerPrefs.GetInt("bestScore").ToString();
         gameClearUI.SetActive(true);
+    }
+
+    public void AddGold()
+    {
+       ownedGold += GameObject.FindWithTag("Enemy").GetComponent<Enemy>().reward;
     }
 
     public void RetryGame()
