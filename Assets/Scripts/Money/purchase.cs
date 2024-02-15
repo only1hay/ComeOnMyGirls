@@ -19,7 +19,7 @@ public class Purchase : MonoBehaviour
         int intPurchasePrice = int.Parse(purchasePrice.text);
 
         towerPosition = GameManager.instance.GetTowerPosition();
-        if (GameManager.instance.ownedGold >= intPurchasePrice)
+        if (GameManager.instance.ownedGold >= intPurchasePrice && intPurchasePrice<550)
         {
             if (!towerPosition.transform.Find("Tower(Clone)"))
             {
