@@ -82,6 +82,7 @@ MonoBehaviour:
   type: 0
   attackSpeed: 0
   attackRange: 0
+  bulletDamage: 0
 --- !u!114 &1113154975037345179
 MonoBehaviour:
   m_ObjectHideFlags: 0
