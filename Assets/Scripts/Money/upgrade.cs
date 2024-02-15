@@ -1,24 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
-using UnityEditor;
 using UnityEngine;
 
 public class upgrade : MonoBehaviour
 {
-
-    //tower 각각의 price를 가져와야 함.
-    [SerializeField] UIManager _UIManager;
     public TMP_Text money;
     public TMP_Text upgradePrice; //tower 각각의 price를 가져와야 함.
     private GameObject towerPosition;
     private TowerAbility _ability;
 
-
-
-
-    TowerSystem towerSystem;
-    TowerAbility towerAbility;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,18 +23,11 @@ public class upgrade : MonoBehaviour
         upgradePrice.text = (towerPosition.transform.Find("Tower(Clone)").GetComponent<TowerAbility>().bulletDamage * 500).ToString();
     }
 
-
     public void UpgradeGirls()
     {
-        towerSystem = _UIManager.GetSelectTowerSystem();
-        towerAbility = towerSystem.GetTowerAbility();
-        if (towerSystem == null)
-        {
-            return;
-        }
+        int intUpgradePrice = int.Parse(upgradePrice.text);
 
-        int intUpgradePrice = (int)towerAbility.bulletDamage * 500;
-
+        towerPosition = GameManager.instance.GetTowerPosition();
         if (GameManager.instance.ownedGold >= intUpgradePrice)
         {
             intUpgradePrice *= 2;
@@ -53,16 +42,6 @@ public class upgrade : MonoBehaviour
 
     public void TowerUpgrade()
     {
-        TowerSystem towerSystem = _UIManager.GetSelectTowerSystem();
-        TowerAbility towerAbility = towerSystem.GetTowerAbility();
-        towerAbility.bulletDamage++;
-
-        //GameObject.Find("SpawnPoint").GetComponent<TowerSpanwer>().UpgradeTower1(towerPosition);
-    }
-
-    private void Awake()
-    {
-        towerSystem = _UIManager.GetSelectTowerSystem();
-        towerAbility = towerSystem.GetTowerAbility();
+        GameObject.Find("SpawnPoint").GetComponent<TowerSpanwer>().UpgradeTower1(towerPosition);
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] TowerPosition towerPosition;
-    [SerializeField] TowerSystem selectTower;
+    [SerializeField] Transform tower;
     Camera mainCamera;
 
     public UI_ShopPanel shopPanel;
@@ -18,11 +18,6 @@ public class UIManager : MonoBehaviour
         shopPanel.Init(this);
     }
 
-    public TowerSystem GetSelectTowerSystem()
-    {
-        return selectTower;
-    }
-
     public void SetTarget(TowerPosition _towerPosition)
     {
         if(towerPosition != null)
@@ -31,11 +26,9 @@ public class UIManager : MonoBehaviour
         }
         this.towerPosition = _towerPosition;
         //transform.position = mainCamera.WorldToScreenPoint(target.position);
-
-        selectTower = towerPosition.GetComponentInChildren<TowerSystem> ();
-
-        if (selectTower!=null)
+        if (towerPosition.transform.Find("Tower(Clone)"))
         {
+            tower = towerPosition.transform.Find("Tower(Clone)").gameObject.transform;
             SetTarget2();
         }
         else
@@ -56,10 +49,5 @@ public class UIManager : MonoBehaviour
     {
         towerPosition.ClosePoint();
         towerPosition = null;
-    }
-
-    public void UpgradePrice()
-    {
-        
     }
 }
