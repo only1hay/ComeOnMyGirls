@@ -119,6 +119,11 @@ public class GameManager : MonoBehaviour
        ownedGold += GameObject.FindWithTag("Enemy").GetComponent<Enemy>().reward;
     }
 
+    public void AddKillScore()
+    {
+        killScore++;
+    }
+
     public void RetryGame()
     {
         SceneManager.LoadScene("SHWScene");

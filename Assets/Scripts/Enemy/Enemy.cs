@@ -82,6 +82,7 @@ public class Enemy : MonoBehaviour
 
             enemySpawn.EnemyDie(this, gameObject);
             GameManager.instance.AddGold();
+            GameManager.instance.AddKillScore();
         }
 
         hp -= _damage;
