@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 1113154975037345179}
   - component: {fileID: 5790287491675485863}
   m_Layer: 0
-  m_Name: Tower
+  m_Name: TowerN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82,6 +82,7 @@ MonoBehaviour:
   type: 0
   attackSpeed: 0
   attackRange: 0
+  bulletDamage: 0
 --- !u!114 &1113154975037345179
 MonoBehaviour:
   m_ObjectHideFlags: 0
