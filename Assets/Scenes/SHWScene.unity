@@ -1850,6 +1850,7 @@ GameObject:
   - component: {fileID: 159482900}
   - component: {fileID: 159482899}
   - component: {fileID: 159482898}
+  - component: {fileID: 159482901}
   m_Layer: 0
   m_Name: SpawnPoint
   m_TagString: SpawnPoint
@@ -1908,6 +1909,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &159482901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 159482897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09d52fda188b8e74d9378c65b22c329c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Tower1: {fileID: 3627480062447799819, guid: 213a0e847b57ef54eac6fd21ce50b566, type: 3}
 --- !u!1 &185546058
 GameObject:
   m_ObjectHideFlags: 0
