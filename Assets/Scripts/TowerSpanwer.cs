@@ -7,6 +7,7 @@ public class TowerSpanwer : MonoBehaviour
     [SerializeField]
     private GameObject Tower1;
     private EnemySpawn enemySpawn;
+    private TowerAbility _ability;
 
     private void Awake()
     {
@@ -19,9 +20,10 @@ public class TowerSpanwer : MonoBehaviour
         Clone.GetComponent<TowerAttack>().Setup(enemySpawn);
     }
 
-    public void UpgradeTower1()
+    public void UpgradeTower1(GameObject tower)
     {
-
+        tower.transform.Find("Tower(Clone)").GetComponent<TowerAbility>().bulletDamage++;
+        
     }
 
 }

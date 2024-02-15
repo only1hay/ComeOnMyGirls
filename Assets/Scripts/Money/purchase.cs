@@ -7,8 +7,6 @@ public class Purchase : MonoBehaviour
 {
     [SerializeField] TMP_Text purchasePrice;
     public TMP_Text moneyText;
-    [SerializeField]
-    private GameObject towerPrefab;
     private GameObject towerPosition;
 
     private void Awake()
