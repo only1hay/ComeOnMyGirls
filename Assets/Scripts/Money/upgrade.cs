@@ -22,16 +22,14 @@ public class upgrade : MonoBehaviour
 
     public void UpgradeGirls()
     {
-        int intMoney = int.Parse(money.text);
         int intUpgradePrice = int.Parse(upgradePrice.text);
 
-        if (intMoney>=intUpgradePrice)
+        if (GameManager.instance.ownedGold >= intUpgradePrice)
         {
-            intMoney -= intUpgradePrice;
             intUpgradePrice *= 2;
+            GameManager.instance.ownedGold -= intUpgradePrice;
         }
 
-        money.text = intMoney.ToString();
         upgradePrice.text = intUpgradePrice.ToString();
 
         //타워랑 연결시켜 타워의 능력치 등을 변화시켜줘야 함.
