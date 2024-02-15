@@ -11,6 +11,11 @@ public class Purchase : MonoBehaviour
     private GameObject towerPrefab;
     private GameObject towerPosition;
 
+    private void Awake()
+    {
+        
+    }
+
     public void PurchaseGirls()
     {
         int intPurchasePrice = int.Parse(purchasePrice.text);
@@ -28,7 +33,6 @@ public class Purchase : MonoBehaviour
 
     private void SpawnTower()
     {
-        GameObject Clone = Instantiate(towerPrefab, towerPosition.transform.position, towerPosition.transform.rotation);
-        Clone.transform.parent = towerPosition.transform;
+        GameObject.Find("SpawnPoint").GetComponent<TowerSpanwer>().SpawnTower1(towerPosition.transform);
     }
 }

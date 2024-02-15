@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class TowerAbility : MonoBehaviour
 {
-    public enum TowerType
+    public enum Type
     {
-        None,
-        bomb
+        Nomal = 0,
+        Sniper,
+        Laser,
+        Bomb
     }
-    public TowerType type;
-    public float attackRange;
-    public float bulletDamage;
+
+    public Type type;
     public float attackSpeed;
-    public int StartMoney;
+    public float attackRange;
 
 }
