@@ -30,7 +30,6 @@ public class upgrade : MonoBehaviour
         towerPosition = GameManager.instance.GetTowerPosition();
         if (GameManager.instance.ownedGold >= intUpgradePrice)
         {
-            intUpgradePrice *= 2;
             GameManager.instance.ownedGold -= intUpgradePrice;
             TowerUpgrade();
         }
