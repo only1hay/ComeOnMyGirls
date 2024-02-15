@@ -11,13 +11,13 @@ public class Purchase : MonoBehaviour
 
     private void Awake()
     {
-        
+
     }
 
     public void PurchaseGirls()
     {
         int intPurchasePrice = int.Parse(purchasePrice.text);
-        
+
         towerPosition = GameManager.instance.GetTowerPosition();
         if (GameManager.instance.ownedGold >= intPurchasePrice)
         {
@@ -31,10 +31,10 @@ public class Purchase : MonoBehaviour
 
     private void SpawnTower(int money)
     {
-        switch (money)
-        {
-            case 400: GameObject.Find("SpawnPoint").GetComponent<TowerSpanwer>().SpawnTower1(towerPosition.transform); break;
-        }
-        
+
+
+        GameObject.Find("SpawnPoint").GetComponent<TowerSpanwer>().SpawnTower1(towerPosition.transform, money);
+
+
     }
 }

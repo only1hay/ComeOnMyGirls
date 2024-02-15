@@ -11,7 +11,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int hp = 1;
+    [SerializeField] private float hp = 1;
     public int reward = 100;
 
     private Transform[] wayPoints;
@@ -72,7 +72,7 @@ public class Enemy : MonoBehaviour
     }
 
     // 적이 공격 받았을 때
-    public void EnemyAttacked(int _damage)
+    public void EnemyAttacked(float _damage)
     {
         hp -= _damage;
 

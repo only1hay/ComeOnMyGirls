@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04f76a83764cc0342955696b9d598d19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  type: 0
+  type: 3
   attackSpeed: 0
   attackRange: 0
   bulletDamage: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb9de885bb28cc499008e285f654a75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 4281781870461502671, guid: 975e0d76ea59fff4e988cb1723c7eef8, type: 3}
+  bullet: {fileID: 4281781870461502671, guid: c0ddaaed4616b314eb1b9cff58bd3f5f, type: 3}
   topSprite: {fileID: 4994566348602851130}
   state: 0
   spawnPoint: {fileID: 253102320755100393}

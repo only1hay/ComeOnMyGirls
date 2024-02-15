@@ -18,8 +18,26 @@ public class TowerSystem : MonoBehaviour
 
     private void Setup()
     {
-        _ability.attackRange = 5f;
-        _ability.attackSpeed = 1;
-        _ability.bulletDamage = 1;
+        
+        switch (_ability.type)
+        {
+            case TowerAbility.Type.Nomal:
+                _ability.attackRange = 5f;
+                _ability.attackSpeed = 1;
+                _ability.bulletDamage = 3;
+                break;
+            case TowerAbility.Type.Laser:
+                _ability.attackRange = 5f;
+                _ability.attackSpeed = 0.1f;
+                _ability.bulletDamage = 0.2f;
+                break;
+            case TowerAbility.Type.Bomb:
+                _ability.attackRange = 5f;
+                _ability.attackSpeed = 5f;
+                _ability.bulletDamage = 10;
+                break;
+            default:
+                break;
+        }
     }
 }

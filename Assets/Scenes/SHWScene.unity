@@ -1999,7 +1999,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09d52fda188b8e74d9378c65b22c329c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Tower1: {fileID: 3627480062447799819, guid: 213a0e847b57ef54eac6fd21ce50b566, type: 3}
+  TowerPrefab1: {fileID: 3627480062447799819, guid: 213a0e847b57ef54eac6fd21ce50b566, type: 3}
+  TowerPrefab2: {fileID: 3627480062447799819, guid: 2862d7245145da14ea3076ecce78ff3b, type: 3}
+  TowerPrefab3: {fileID: 3627480062447799819, guid: 7b2db0cd97a903349bc92e5c9fdfd920, type: 3}
 --- !u!1 &185546058
 GameObject:
   m_ObjectHideFlags: 0
