@@ -28,12 +28,13 @@ public class TowerSpanwer : MonoBehaviour
         }
         GameObject Clone = Instantiate(Tower, transform.position, Quaternion.identity);
         Clone.transform.parent = transform.transform;
+        Clone.transform.name = "Tower";
         Clone.GetComponent<TowerAttack>().Setup(enemySpawn);
     }
 
     public void UpgradeTower1(GameObject tower)
     {
-        tower.transform.Find("Tower(Clone)aw").GetComponent<TowerAbility>().bulletDamage++;
+        tower.transform.Find("Tower").GetComponent<TowerAbility>().bulletDamage++;
     }
 
 }

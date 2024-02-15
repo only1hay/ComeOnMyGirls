@@ -26,9 +26,9 @@ public class UIManager : MonoBehaviour
         }
         this.towerPosition = _towerPosition;
         //transform.position = mainCamera.WorldToScreenPoint(target.position);
-        if (towerPosition.transform.Find("Tower(Clone)"))
+        if (towerPosition.transform.Find("Tower"))
         {
-            tower = towerPosition.transform.Find("Tower(Clone)").gameObject.transform;
+            tower = towerPosition.transform.Find("Tower").gameObject.transform;
             SetTarget2();
         }
         else

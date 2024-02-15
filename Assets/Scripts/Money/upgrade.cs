@@ -20,7 +20,7 @@ public class upgrade : MonoBehaviour
     void Update()
     {
         towerPosition = GameManager.instance.GetTowerPosition();
-        upgradePrice.text = (towerPosition.transform.Find("Tower(Clone)").GetComponent<TowerAbility>().bulletDamage * 500).ToString();
+        upgradePrice.text = (towerPosition.transform.Find("Tower").GetComponent<TowerAbility>().bulletDamage * 500).ToString();
     }
 
     public void UpgradeGirls()
