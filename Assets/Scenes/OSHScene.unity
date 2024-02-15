@@ -1188,8 +1188,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3b88911e556e245bfe079a6b890013, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves: 5
-  maxWaveEnemyCount: 40
+  maxWave: 5
+  waveIdx: 0
+  maxWaveEnemyCount: 10
 --- !u!1 &779935452
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,7 @@ public class Wave : MonoBehaviour
 {
     [SerializeField] private int maxWave = 5;
 
-    [SerializeField] private int waveIdx = 0;            
+    public int waveIdx = 0;            
     public int maxWaveEnemyCount = 40;  
 
     private EnemySpawn enemySpawn;

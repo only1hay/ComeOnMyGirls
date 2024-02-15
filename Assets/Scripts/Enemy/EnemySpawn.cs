@@ -15,6 +15,7 @@ using UnityEngine;
 // 적을 1~3초 랜덤으로 적 스폰
 // 적이 생성 되었을 때 enemyList에 넣어서 관리
 // 적이 죽었을 때 처리
+// wave마다 생성된 적들 모두 처리 시 NextWave() 호출
 
 public class EnemySpawn : MonoBehaviour
 {
@@ -50,16 +51,31 @@ public class EnemySpawn : MonoBehaviour
         {
             spawnEnemyCount++;
 
-            int idx = Random.Range(0, 3); // @@@@@이거 Length로 바꿔보기(라운드 당 몬스터 종류 제어)!!!!!
-            GameObject clone = Instantiate(enemyPrefabs[idx], this.transform.position, Quaternion.identity);
-            Enemy enemy = clone.GetComponent<Enemy>();
-
-            enemy.Init(wayPoints);
-            enemyList.Add(enemy);
+            waveRandomrEnemy();
 
             float spawnTime = Random.Range(1, 4);
             yield return new WaitForSeconds(spawnTime);
         }
+    }
+
+    // wave 마다 새로운 적 생성
+    private void waveRandomrEnemy()
+    {
+        int idx = 0;
+        if (wave.waveIdx < 3)
+        {
+            idx = Random.Range(0, wave.waveIdx);
+        }
+        else
+        {
+            idx = Random.Range(0, 3);
+        }
+
+        GameObject clone = Instantiate(enemyPrefabs[idx], this.transform.position, Quaternion.identity);
+        Enemy enemy = clone.GetComponent<Enemy>();
+
+        enemy.Init(wayPoints);
+        enemyList.Add(enemy);
     }
 
     // 적이 죽었을 때
