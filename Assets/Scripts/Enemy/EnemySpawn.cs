@@ -94,7 +94,7 @@ public class EnemySpawn : MonoBehaviour
         Destroy(_gameObject);
 
         // enemyList가 비었을 때
-        if (enemyList.Count == 0)
+        if (enemyList.Count == 0 && enemyCount == 0)
         {
             wave.NextWave();
         }
