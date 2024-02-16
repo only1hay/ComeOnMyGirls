@@ -8,6 +8,7 @@ public class UI_UpgradePanel : MonoBehaviour
 {
     Camera mainCamera;
     public UI_ShopPanel shopPanel;
+    public Image salePanel;
     [SerializeField] private Image Image1;
     [SerializeField] private Image Image2;
     [SerializeField] private Image Image3;
@@ -45,5 +46,16 @@ public class UI_UpgradePanel : MonoBehaviour
             gameObject.SetActive(false);
         }
         
+    }
+
+    public void WarningSalesGirl()
+    {
+        salePanel.gameObject.SetActive(false);
+    }
+
+    public void CloseWarning()
+    {
+        salePanel.gameObject.SetActive(true) ;
+        Invoke("WarningSalesGirl", 0.5f);
     }
 }
